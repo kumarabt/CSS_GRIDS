@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.child{
+    background-color: rgb(249, 211, 141);
+    border-radius: 5%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    opacity: 0.8;
+}
+body{
+    display:flex;
+    height:100vh;
+    width:100vw;
+    align-items:center;
+    justify-content:center;
+}
+.child1{
+    grid-area: A;
+}
+.child2{
+    grid-area: B;
+}
+.child3{
+    grid-area: C;
+}
+.child4{
+    grid-area: D;
+}
+
+/* HERE, I AM DOING LAYOUTING OF MY CHILDS SITTING AT PARENT LEVEL USING GRID AREAS AND GRID TEMPLATE AREAS 
+PROPERTIES. */
+.parent{
+    width: 50%;
+    height: 50vh;
+    display: grid;
+    grid-template-areas: 
+    'A A B'
+    'C D B'
+    ;
+    border: 2px solid black;
+    padding: 3%;
+    column-gap: 8px;
+    row-gap: 8px;
+}

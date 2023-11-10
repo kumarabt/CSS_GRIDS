@@ -1,0 +1,24 @@
+1. In the grid layouting system, justify-item and justify-self properties are used to align the child items 
+individually inside a grid container horizontally.
+
+2. The property justify-item is given at parent/container level inside a grid and it by-default defines the 
+justify-self property for all the items or childs inside the grid container.That means, whenever we want to 
+align all the child items in a grid container in a similar manner in horizontal direction , we prefer to use the 
+justify-item property just once at parent grid level for all of them. 
+
+Example: .container{
+              display: grid;
+              justify-items: center; // aligns all the childs inside container horizontally at center. 
+                 }
+
+3. On the other hand, justify-self property is used or set at the child or item level inside the grid container,
+and it individually set the property of only that item for which it is defined. So, whenever a usecase arises 
+when we want to align a particular child of a grid container in a certain manner then inside that child in css
+we define the particular alignment property by using justify-self and not at the parent level.
+
+Example:   .parent{
+               display: grid;
+                 } 
+           .child1{
+               justify-self: center; // aligns only child1 inside parent horizontally at center.
+               }

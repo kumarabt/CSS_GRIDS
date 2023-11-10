@@ -1,0 +1,36 @@
+1. The grid-auto-rows and grid-auto-columns properties in css grids are used to set the size of the row and column
+in a grid container.
+
+2. But, this property only affects those rows and columns in which size is not set or not predefined in the grid 
+container using grid-template-rows or grid-template-columns property.
+
+3. Also, Note that **** The grid-template-rows and grid-templates-columns property over-rides the grid-auto-rows and
+grid-auto-columns property for size of rows and columns in a grid container if size is predefined using the grid 
+template properties****
+
+4. Examples: (a)  .parent{
+                       display: grid;
+                       grid-auto-rows:200px;
+                       grid-auto-columns:100px;
+                      }
+                
+                Now, in the above code we defined the auto row and column sizes so since template sizes of rows and
+                columns are not defined hence, automatically now every row take the size defined in the auto grid
+                property i.e. 200px and every column will the take the size of 100px as defined in grid-auto-column
+                property.
+
+             (b) .parent{
+                       display: grid;
+                       grid-template-rows: 100px 200px 300px;
+                       grid-auto-rows: 250px;
+                     }
+
+                Now, in the above code snippet for first 3 rows the sizes of rows are predefined by grid template
+                properties i.e. now grid-auto-property will be over-rided by template properties and grid auto
+                property will not be applied for the first 3 rows in the grid container but since, if we make more
+                rows than 3 in our grid container, as their sizes are not defined by the template properties
+                by us. So, in that case the grid-auto-rows will come into picture and now other than 1st 3 rows
+                all other remaining rows will inherit the size defined by grid-auto-row property i.e. 250px.
+                
+                Similarly, the grid-auto-columns property also work only on the column sizes which are not
+                defined by the user in grid container using the template properties.

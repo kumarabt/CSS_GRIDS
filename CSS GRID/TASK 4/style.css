@@ -1,0 +1,48 @@
+       *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+            grid-template-rows: repeat(2,100px);
+            width:80%;
+            height: 50%;
+            row-gap: 20px;
+            column-gap: 20px;
+            padding: 20px;
+            border: 2px solid black;
+        }
+        .box{
+            border-radius: 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: xx-large;
+            font-weight: bold;
+            opacity: 0.8;
+        }
+        .box1,.box3,.box5,.box7{
+            background-color: black;
+            color: white;
+        }
+        .box2,.box4,.box6,.box8{
+            background-color: gray;
+        }
+
+        /* Used ORDER property to postion the boxes as given in the problem statement. */
+        .box1{
+            order:5;
+        }
+        .box2{
+            order:6;
+        }
+    
